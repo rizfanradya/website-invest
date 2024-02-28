@@ -4,7 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: website_invest
     ports:
       - "3000:3000"
     volumes:
