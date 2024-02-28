@@ -15,7 +15,7 @@ export async function POST(req: Request) {
         data: {
           username: data.username,
           email: data.email,
-          password: await bcrypt.hash(data.password, 20),
+          password: await bcrypt.hash(data.password, 10),
           referral: data.referral,
         },
       });

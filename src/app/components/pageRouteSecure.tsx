@@ -16,6 +16,6 @@ export default function PageRouteSecure({ children }: { children: ReactNode }) {
   if (session) {
     return <>{children}</>;
   } else {
-    router.push("/login");
+    window.location.href = "/login";
   }
 }
