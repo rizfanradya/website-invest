@@ -1,9 +1,11 @@
 "use client";
-import { useSession } from "next-auth/react";
+import { allowConsoleLog } from "@/utils/constant";
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaKey, FaUserAlt } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 type inputs = {
   username: string;
@@ -14,10 +16,42 @@ export default function FormLogin() {
   const { register, handleSubmit } = useForm<inputs>();
   const [buttonSubmit, setButtonSubmit] = useState(false);
   const router = useRouter();
-  const { data: session, status } = useSession();
+
+  const onSubmit = async (e: inputs) => {
+    setButtonSubmit(true);
+    try {
+      const response = await signIn("credentials", {
+        username: e.username,
+        password: e.password,
+        redirect: false,
+      });
+      if (response!.ok === false) {
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Username atau password yang anda masukkan salah",
+          allowOutsideClick: false,
+        });
+      } else if (response!.ok === true) {
+        router.push("/");
+      }
+      setButtonSubmit(false);
+    } catch (error) {
+      allowConsoleLog && console.error(error);
+      setButtonSubmit(false);
+      Swal.fire({
+        icon: "error",
+        title: "Server Error 404",
+        allowOutsideClick: false,
+      });
+    }
+  };
 
   return (
-    <form className="text-start w-full mt-8 flex flex-col gap-4">
+    <form
+      className="text-start w-full mt-8 flex flex-col gap-4"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div className="flex flex-col gap-1">
         <label htmlFor="Username" className="label-text">
           Username

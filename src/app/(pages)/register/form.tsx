@@ -1,26 +1,58 @@
 "use client";
-import { useSession } from "next-auth/react";
+import { allowConsoleLog } from "@/utils/constant";
+import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { BiSolidDiscount } from "react-icons/bi";
 import { FaKey, FaUserAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Swal from "sweetalert2";
 
 type inputs = {
   username: string;
   email: string;
   password: string;
+  referral: string;
 };
 
 export default function FormRegister() {
   const { register, handleSubmit } = useForm<inputs>();
   const [buttonSubmit, setButtonSubmit] = useState(false);
   const router = useRouter();
-  const { data: session, status } = useSession();
+
+  async function onSubmit(e: inputs) {
+    try {
+      setButtonSubmit(true);
+      const { data } = await axios.post("/api/user/create", e);
+      if (data.status === false) {
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: data.message,
+          allowOutsideClick: false,
+        });
+      } else {
+        router.push("/login");
+      }
+      setButtonSubmit(false);
+    } catch (error: any) {
+      allowConsoleLog && console.log(error);
+      setButtonSubmit(false);
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: error.message,
+        allowOutsideClick: false,
+      });
+    }
+  }
 
   return (
-    <form className="text-start w-full mt-8 flex flex-col gap-4">
+    <form
+      className="text-start w-full mt-8 flex flex-col gap-4"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div className="flex flex-col gap-1">
         <label htmlFor="Username" className="label-text">
           Username
@@ -83,7 +115,7 @@ export default function FormRegister() {
             type="text"
             className="w-full"
             required
-            {...register("password", { required: true })}
+            {...register("referral", { required: true })}
           />
           <BiSolidDiscount size={"1.5em"} className="text-slate-500" />
         </div>

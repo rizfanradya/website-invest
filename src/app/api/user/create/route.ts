@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   try {
     if (!data.username || !data.email || !data.password || !data.referral) {
       return NextResponse.json(
-        { message: "data cannot be empty" },
+        { message: "Data cannot be empty", status: false },
         { status: 404 }
       );
     } else {
@@ -19,9 +19,13 @@ export async function POST(req: Request) {
           referral: data.referral,
         },
       });
-      return NextResponse.json(add);
+      return NextResponse.json({ data: add, status: true });
     }
   } catch (error) {
-    return NextResponse.json(error);
+    return NextResponse.json({
+      error,
+      message: "User already exist",
+      status: false,
+    });
   }
 }

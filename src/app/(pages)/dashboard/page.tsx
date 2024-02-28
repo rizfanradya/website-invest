@@ -1,3 +1,5 @@
+import PageRouteSecure from "@/app/components/pageRouteSecure";
+
 export default function Dashboard() {
-  return <div>Dashboard</div>;
+  return <PageRouteSecure>Dashboard</PageRouteSecure>;
 }
