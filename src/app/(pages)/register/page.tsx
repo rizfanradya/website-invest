@@ -6,8 +6,8 @@ import LoginRegisterRouteSecure from "@/app/components/loginRegisterRouteSecure"
 export default function Register() {
   return (
     <LoginRegisterRouteSecure>
-      <div className="bg-slate-200 flex justify-center items-center px-4 py-8">
-        <div className="card max-w-sm bg-white shadow-xl">
+      <div className="flex justify-center items-center px-4 py-8">
+        <div className="card max-w-sm bg-white">
           <div className="card-body">
             <div className="text-center flex flex-col items-center justify-center gap-2">
               <Image alt="logo" width={75} height={75} src={"/logo.svg"} />
