@@ -35,6 +35,8 @@ const authOptions: NextAuthOptions = {
     }),
   ],
 
+  pages: { signIn: "/login" },
+
   callbacks: {
     jwt(params: any) {
       if (params.user?.username) {
