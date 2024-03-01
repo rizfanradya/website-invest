@@ -1,17 +1,17 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
-import { PrismaClient } from "@prisma/client";
+import prisma from "@/utils/prisma";
 
 const authOptions: NextAuthOptions = {
   session: { strategy: "jwt" },
 
-  secret: process.env.NEXT_PUBLIC_NEXTAUTH_SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
 
   providers: [
     CredentialsProvider({
       type: "credentials",
-
+      name: "Credentials",
       credentials: {
         username: { label: "username", type: "text" },
         password: { label: "password", type: "password" },
@@ -23,14 +23,20 @@ const authOptions: NextAuthOptions = {
           password: string;
         };
 
-        const prisma = new PrismaClient();
-        const user = await prisma.user.findFirst({
+        const user: any = await prisma.user.findFirst({
           where: { username },
         });
-        if (!user!.username) throw new Error("email mismatch");
-        const passwordMatch = await bcrypt.compare(password, user!.password);
-        if (!passwordMatch) throw new Error("password mismatch");
-        return { username: user!.username, id: user!.id.toString() };
+
+        if (user.username) {
+          const passwordMatch = await bcrypt.compare(password, user!.password);
+          if (passwordMatch) {
+            return user;
+          } else {
+            return null;
+          }
+        } else {
+          return null;
+        }
       },
     }),
   ],
@@ -38,17 +44,24 @@ const authOptions: NextAuthOptions = {
   pages: { signIn: "/login" },
 
   callbacks: {
-    jwt(params: any) {
-      if (params.user?.username) {
-        params.token.username = params.user.username;
-        params.token.id = params.user.id;
+    async jwt({ token, account, profile, user }: any) {
+      if (account?.provider === "credentials") {
+        token.sub = user.id;
+        token.name = user.id;
+        token.email = user.username;
       }
-      return params.token;
+      return token;
     },
 
-    session({ session, token }) {
-      if (session.user) {
-        (session.user as { id: string }).id = token.id as string;
+    session({ session, token }: any) {
+      if ("id" in token) {
+        session.user.id = token.sub;
+      }
+      if ("name" in token) {
+        session.user.name = token.name;
+      }
+      if ("email" in token) {
+        session.user.email = token.email;
       }
       return session;
     },
