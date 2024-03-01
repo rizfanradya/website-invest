@@ -1,2 +1,0 @@
-run host    = pm2 start npm --name website-invest -- start
-remote ssh  = ssh root@178.16.138.58
