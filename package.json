@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "postinstall": "npx prisma migrate dev && npx prisma generate && npx prisma db push",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "npx prisma migrate dev && npx prisma generate && npx prisma db push",
+    "host": "pm2 start npm --name website-invest -- start"
   },
   "dependencies": {
     "@prisma/client": "^5.10.2",
