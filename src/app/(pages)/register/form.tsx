@@ -54,84 +54,64 @@ export default function FormRegister() {
       className="text-start w-full mt-8 flex flex-col gap-4"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="flex flex-col gap-1">
-        <label htmlFor="Username" className="label-text">
-          Username
-        </label>
-        <div className="flex items-center justify-between input input-bordered rounded-2xl">
-          <input
-            id="Username"
-            type="text"
-            className="w-full"
-            required
-            {...register("username", { required: true })}
-          />
-          <FaUserAlt size={"1.5em"} className="text-slate-500" />
-        </div>
+      <div className="flex items-center justify-between input input-bordered rounded-2xl">
+        <input
+          id="Username"
+          type="text"
+          className="w-full"
+          required
+          placeholder="Username"
+          {...register("username", { required: true })}
+        />
+        <FaUserAlt size={"1.5em"} className="text-slate-500" />
       </div>
 
-      <div className="flex flex-col gap-1">
-        <label htmlFor="Email" className="label-text">
-          Email
-        </label>
-        <div className="flex items-center justify-between input input-bordered rounded-2xl">
-          <input
-            id="Email"
-            type="email"
-            className="w-full"
-            required
-            {...register("email", { required: true })}
-          />
-          <MdEmail size={"1.5em"} className="text-slate-500" />
-        </div>
+      <div className="flex items-center justify-between input input-bordered rounded-2xl">
+        <input
+          id="Email"
+          type="email"
+          className="w-full"
+          required
+          placeholder="Email"
+          {...register("email", { required: true })}
+        />
+        <MdEmail size={"1.5em"} className="text-slate-500" />
       </div>
 
-      <div className="flex flex-col gap-1">
-        <label htmlFor="nohp" className="label-text">
-          Nomor Telepon
-        </label>
-        <div className="flex items-center justify-between input input-bordered rounded-2xl">
-          <input
-            id="nohp"
-            type="tel"
-            className="w-full"
-            required
-            {...register("noHp", { required: true })}
-          />
-          <FaPhone size={"1.5em"} className="text-slate-500" />
-        </div>
+      <div className="flex items-center justify-between input input-bordered rounded-2xl">
+        <input
+          id="nohp"
+          type="tel"
+          className="w-full"
+          required
+          placeholder="Nomor Telepon"
+          {...register("noHp", { required: true })}
+        />
+        <FaPhone size={"1.5em"} className="text-slate-500" />
       </div>
 
-      <div className="flex flex-col gap-1">
-        <label htmlFor="Password" className="label-text">
-          Password
-        </label>
-        <div className="flex items-center justify-between input input-bordered rounded-2xl">
-          <input
-            id="Password"
-            type="password"
-            className="w-full"
-            required
-            {...register("password", { required: true })}
-          />
-          <FaKey size={"1.5em"} className="text-slate-500" />
-        </div>
+      <div className="flex items-center justify-between input input-bordered rounded-2xl">
+        <input
+          id="Password"
+          type="password"
+          className="w-full"
+          required
+          placeholder="Password"
+          {...register("password", { required: true })}
+        />
+        <FaKey size={"1.5em"} className="text-slate-500" />
       </div>
 
-      <div className="flex flex-col gap-1">
-        <label htmlFor="Kode Referral" className="label-text">
-          Kode Referral
-        </label>
-        <div className="flex items-center justify-between input input-bordered rounded-2xl">
-          <input
-            id="Kode Referral"
-            type="text"
-            className="w-full"
-            required
-            {...register("referral", { required: true })}
-          />
-          <BiSolidDiscount size={"1.5em"} className="text-slate-500" />
-        </div>
+      <div className="flex items-center justify-between input input-bordered rounded-2xl">
+        <input
+          id="Kode Referral"
+          type="text"
+          className="w-full"
+          required
+          placeholder="Kode Referral"
+          {...register("referral", { required: true })}
+        />
+        <BiSolidDiscount size={"1.5em"} className="text-slate-500" />
       </div>
 
       <div className="flex flex-col items-center justify-center gap-4 mt-4">

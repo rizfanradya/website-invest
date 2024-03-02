@@ -14,10 +14,6 @@ export default function Register() {
               <h1 className="font-semibold text-2xl mt-6">
                 Create Account Free
               </h1>
-              <p className="text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, vel.
-              </p>
 
               <FormRegister />
 

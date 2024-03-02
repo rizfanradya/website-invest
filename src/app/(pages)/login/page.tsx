@@ -12,10 +12,6 @@ export default function Login() {
             <div className="text-center flex flex-col items-center justify-center gap-2">
               <Image alt="logo" width={75} height={75} src={"/logoimg.png"} />
               <h1 className="font-semibold text-2xl mt-6">Welcome Back</h1>
-              <p className="text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis, vel.
-              </p>
 
               <FormLogin />
 
