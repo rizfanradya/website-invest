@@ -11,13 +11,13 @@ import Menu from "./menu";
 import { redirect } from "next/navigation";
 
 export default async function Dashboard() {
-  const session = await getServerSession();
+  const session: any = await getServerSession();
   if (!session) {
     redirect("/login");
   }
 
   const userInfo = await prisma.user.findUnique({
-    where: { id: session.user.name },
+    where: { id: session.user.name! },
   });
 
   return (
