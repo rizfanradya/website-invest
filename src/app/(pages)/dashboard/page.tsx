@@ -8,9 +8,14 @@ import { getServerSession } from "next-auth";
 import UserIncomeNotify from "./userIncomeNotify";
 import Partner from "./partner";
 import Menu from "./menu";
+import { redirect } from "next/navigation";
 
 export default async function Dashboard() {
   const { user } = await getServerSession();
+  if (!user) {
+    redirect("/login");
+  }
+
   const userInfo = await prisma.user.findUnique({ where: { id: user.name } });
 
   return (
