@@ -1,3 +1,4 @@
+import Logout from "@/app/components/logout";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,6 +30,10 @@ export default function Navbar() {
                   <Image src={"/lang.png"} alt="lang" width={25} height={25} />
                   <p>Bahasa Indonesia</p>
                 </div>
+              </div>
+
+              <div className="mt-8">
+                <Logout />
               </div>
             </div>
           </div>

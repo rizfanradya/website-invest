@@ -11,12 +11,14 @@ import Menu from "./menu";
 import { redirect } from "next/navigation";
 
 export default async function Dashboard() {
-  const { user } = await getServerSession();
-  if (!user) {
+  const session = await getServerSession();
+  if (!session) {
     redirect("/login");
   }
 
-  const userInfo = await prisma.user.findUnique({ where: { id: user.name } });
+  const userInfo = await prisma.user.findUnique({
+    where: { id: session.user.name },
+  });
 
   return (
     <PageRouteSecure>

@@ -1,24 +1,16 @@
-"use client";
-import { useSession } from "next-auth/react";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 import { ReactNode } from "react";
-import LoadingSpinner from "./loading";
-import { useRouter } from "next/navigation";
 
-export default function LoginRegisterRouteSecure({
+export default async function LoginRegisterRouteSecure({
   children,
 }: {
   children: ReactNode;
 }) {
-  const { data: session, status } = useSession();
-  const router = useRouter();
-
-  if (status === "loading") {
-    return <LoadingSpinner />;
-  }
-
+  const session: any = await getServerSession();
   if (session) {
-    router.push("/");
-  } else {
-    return <>{children}</>;
+    redirect("/");
   }
+
+  return <>{children}</>;
 }

@@ -1,21 +1,16 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-"use client";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
 import { ReactNode } from "react";
-import LoadingSpinner from "./loading";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 
-export default function PageRouteSecure({ children }: { children: ReactNode }) {
-  const { data: session, status } = useSession();
-  const router = useRouter();
-
-  if (status === "loading") {
-    return <LoadingSpinner />;
+export default async function PageRouteSecure({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  const session: any = await getServerSession();
+  if (!session) {
+    redirect("/login");
   }
 
-  if (session) {
-    return <>{children}</>;
-  } else {
-    router.push("/login");
-  }
+  return <>{children}</>;
 }
