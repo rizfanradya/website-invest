@@ -14,14 +14,12 @@ const settings = {
   arrows: false,
 };
 const dataCarousel = [
-  { src: "carousel/1.png", alt: "1" },
-  { src: "carousel/2.png", alt: "2" },
-  { src: "carousel/3.png", alt: "3" },
-  { src: "carousel/4.png", alt: "4" },
-  { src: "carousel/5.png", alt: "5" },
-  { src: "carousel/6.png", alt: "6" },
-  { src: "carousel/7.png", alt: "7" },
-  { src: "carousel/8.jpg", alt: "8" },
+  { src: "carousel/1.jpg", alt: "1" },
+  { src: "carousel/2.webp", alt: "2" },
+  { src: "carousel/3.jpg", alt: "3" },
+  { src: "carousel/4.jpg", alt: "4" },
+  { src: "carousel/5.jpg", alt: "5" },
+  { src: "carousel/6.jpeg", alt: "6" },
 ];
 
 export default function DashboardCarousel() {

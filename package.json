@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "npx prisma migrate dev && npx prisma generate && npx prisma db push",
-    "host": "pm2 start npm --name website-invest -- start"
+    "initdb": "npx prisma db push && npx prisma generate",
+    "host": "pm2 start npm --name website-invest -- start",
+    "hoststart": "npx prisma db push && npx prisma generate && next build && pm2 start npm --name website-invest -- start"
   },
   "dependencies": {
     "@prisma/client": "^5.10.2",

@@ -19,12 +19,12 @@ export default function Menu() {
         </li>
 
         <li className="absolute -top-6 bg-base-300 rounded-full">
-          <Link href={"/"} className="tooltip" data-tip="Pesanan">
+          <Link href={"/"}>
             <Image
-              src={"/logo.svg"}
+              src={"/logoimg.png"}
               alt="logo"
-              width={50}
-              height={50}
+              width={30}
+              height={30}
               className="rounded-full"
             />
           </Link>

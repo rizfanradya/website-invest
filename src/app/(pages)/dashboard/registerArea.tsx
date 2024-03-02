@@ -33,7 +33,7 @@ export default function RegisterArea() {
       {dataRegisterArea.map((doc, index) => (
         <div
           key={index}
-          className="card bg-orange-600 text-white shadow-lg mt-4"
+          className="card bg-sky-600 text-white shadow-lg mt-4"
         >
           <div className="card-body">
             <div className="font-medium mb-4 text-2xl flex justify-between items-center">

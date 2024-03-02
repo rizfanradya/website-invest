@@ -10,7 +10,7 @@ export default function Register() {
         <div className="card max-w-sm bg-base-100">
           <div className="card-body">
             <div className="text-center flex flex-col items-center justify-center gap-2">
-              <Image alt="logo" width={75} height={75} src={"/logo.svg"} />
+              <Image alt="logo" width={75} height={75} src={"/logoimg.png"} />
               <h1 className="font-semibold text-2xl mt-6">
                 Create Account Free
               </h1>

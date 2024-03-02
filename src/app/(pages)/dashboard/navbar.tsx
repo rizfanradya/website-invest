@@ -6,9 +6,8 @@ export default function Navbar() {
   return (
     <div className="navbar bg-base-100 fixed p-4 z-10">
       <div className="navbar-start">
-        <Link href={"/"} className="flex items-center gap-2 font-semibold">
-          <Image src={"logo.svg"} alt="logo" width={35} height={35} />
-          <p>Blibli71</p>
+        <Link href={"/"}>
+          <Image src={"/logo.png"} alt="logo" width={70} height={70} />
         </Link>
       </div>
 
