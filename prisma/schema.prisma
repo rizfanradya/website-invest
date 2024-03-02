@@ -14,11 +14,17 @@ datasource db {
 }
 
 model user {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  username  String   @unique
-  email     String
-  password  String
-  referral  String
+  id               Int      @id @default(autoincrement())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  username         String   @unique
+  email            String
+  password         String
+  referral         String
+  noHp             String
+  balance          Int
+  todayIncome      Int
+  yesterdayIncome  Int
+  cumulativeIncome Int
+  teamBenefit      Int
 }

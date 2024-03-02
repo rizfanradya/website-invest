@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { BiSolidDiscount } from "react-icons/bi";
-import { FaKey, FaUserAlt } from "react-icons/fa";
+import { FaKey, FaPhone, FaUserAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Swal from "sweetalert2";
 
@@ -14,6 +14,7 @@ type inputs = {
   email: string;
   password: string;
   referral: string;
+  noHp: string;
 };
 
 export default function FormRegister() {
@@ -24,7 +25,7 @@ export default function FormRegister() {
   async function onSubmit(e: inputs) {
     try {
       setButtonSubmit(true);
-      const { data } = await axios.post("/api/user/create", e);
+      const { data } = await axios.post("/api/user/register", e);
       if (data.status === false) {
         Swal.fire({
           icon: "error",
@@ -42,7 +43,7 @@ export default function FormRegister() {
       Swal.fire({
         icon: "error",
         title: "Error",
-        text: error.message,
+        text: error.response.data.message,
         allowOutsideClick: false,
       });
     }
@@ -61,7 +62,6 @@ export default function FormRegister() {
           <input
             id="Username"
             type="text"
-            placeholder="Username"
             className="w-full"
             required
             {...register("username", { required: true })}
@@ -78,12 +78,27 @@ export default function FormRegister() {
           <input
             id="Email"
             type="email"
-            placeholder="Email"
             className="w-full"
             required
             {...register("email", { required: true })}
           />
           <MdEmail size={"1.5em"} className="text-slate-500" />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-1">
+        <label htmlFor="nohp" className="label-text">
+          Nomor Telepon
+        </label>
+        <div className="flex items-center justify-between input input-bordered rounded-2xl">
+          <input
+            id="nohp"
+            type="tel"
+            className="w-full"
+            required
+            {...register("noHp", { required: true })}
+          />
+          <FaPhone size={"1.5em"} className="text-slate-500" />
         </div>
       </div>
 
@@ -95,7 +110,6 @@ export default function FormRegister() {
           <input
             id="Password"
             type="password"
-            placeholder="Password"
             className="w-full"
             required
             {...register("password", { required: true })}
@@ -111,7 +125,6 @@ export default function FormRegister() {
         <div className="flex items-center justify-between input input-bordered rounded-2xl">
           <input
             id="Kode Referral"
-            placeholder="Kode Referral"
             type="text"
             className="w-full"
             required

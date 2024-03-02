@@ -1,22 +1,30 @@
 import PageRouteSecure from "@/app/components/pageRouteSecure";
-import Image from "next/image";
-import Link from "next/link";
-import { RiMenu2Fill } from "react-icons/ri";
+import Navbar from "./navbar";
+import DashboardCarousel from "./carousel";
+import UserInfo from "./userInfo";
+import RegisterArea from "./registerArea";
+import prisma from "@/utils/prisma";
+import { getServerSession } from "next-auth";
+import UserIncomeNotify from "./userIncomeNotify";
+import Partner from "./partner";
+import Menu from "./menu";
 
-export default function Dashboard() {
+export default async function Dashboard() {
+  const { user } = await getServerSession();
+  const userInfo = await prisma.user.findUnique({ where: { id: user.name } });
+
   return (
     <PageRouteSecure>
-      <div className="navbar bg-base-100 fixed p-6">
-        <div className="navbar-start">
-          <Link href={"/"} className="btn btn-ghost text-xl">
-            <Image src={"logo.svg"} alt="logo" width={50} height={50} />
-          </Link>
-        </div>
-
-        <div className="navbar-end">
-          <div className="btn">Button</div>
-        </div>
+      <title>Blibli71 - Dashboard</title>
+      <Navbar />
+      <div className="px-4">
+        <DashboardCarousel />
+        <UserInfo doc={userInfo} />
+        <RegisterArea />
+        <UserIncomeNotify />
+        <Partner />
       </div>
+      <Menu />
     </PageRouteSecure>
   );
 }
