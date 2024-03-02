@@ -24,7 +24,7 @@ const dataCarousel = [
 
 export default function DashboardCarousel() {
   return (
-    <div className="pt-16 lg:w-4/5 m-auto">
+    <div className="m-auto">
       <Slider {...settings}>
         {dataCarousel.map((doc, index) => (
           <Image

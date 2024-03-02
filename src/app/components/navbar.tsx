@@ -30,10 +30,6 @@ export default function Navbar() {
                   <p>Bahasa Indonesia</p>
                 </div>
               </div>
-
-              <div className="mt-8">
-                <Logout />
-              </div>
             </div>
           </div>
 

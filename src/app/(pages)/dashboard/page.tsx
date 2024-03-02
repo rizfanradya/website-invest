@@ -1,5 +1,5 @@
 import PageRouteSecure from "@/app/components/pageRouteSecure";
-import Navbar from "./navbar";
+import Navbar from "../../components/navbar";
 import DashboardCarousel from "./carousel";
 import UserInfo from "./userInfo";
 import RegisterArea from "./registerArea";
@@ -7,7 +7,7 @@ import prisma from "@/utils/prisma";
 import { getServerSession } from "next-auth";
 import UserIncomeNotify from "./userIncomeNotify";
 import Partner from "./partner";
-import Menu from "./menu";
+import Menu from "../../components/menu";
 import { redirect } from "next/navigation";
 
 export default async function Dashboard() {
@@ -24,14 +24,14 @@ export default async function Dashboard() {
     <PageRouteSecure>
       <title>Blibli71 - Dashboard</title>
       <Navbar />
-      <div className="px-4">
+      <div className="px-4 py-16">
         <DashboardCarousel />
         <UserInfo doc={userInfo} />
         <RegisterArea />
         <UserIncomeNotify />
         <Partner />
       </div>
-      <Menu />
+      <Menu active="dashboard" />
     </PageRouteSecure>
   );
 }
