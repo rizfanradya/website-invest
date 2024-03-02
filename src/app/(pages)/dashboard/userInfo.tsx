@@ -1,4 +1,4 @@
-export default async function UserInfo({ doc }) {
+export default async function UserInfo({ doc }: any) {
   return (
     <div className="card bg-base-300 shadow-lg">
       <div className="card-body">
