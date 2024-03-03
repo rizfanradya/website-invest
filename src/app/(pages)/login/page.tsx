@@ -18,7 +18,7 @@ export default function Login() {
 
               <div className="flex justify-between w-full text-start text-sm font-medium text-gray-400 mt-4">
                 <p>Forgot Password?</p>
-                <Link href={"/login"} className="text-primary">
+                <Link href={"/resetPassword"} className="text-primary">
                   Reset Password
                 </Link>
               </div>
