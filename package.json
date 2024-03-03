@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "initdb": "npx prisma migrate dev && npx prisma db push && npx prisma generate",
-    "hostbuild": "pm2 start npm --name website-invest -- start",
+    "hostbuild": "next build && pm2 start npm --name website-invest -- start",
     "hoststart": "npx prisma migrate dev && npx prisma db push && npx prisma generate && next build && pm2 start npm --name website-invest -- start"
   },
   "dependencies": {
