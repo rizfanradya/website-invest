@@ -11,13 +11,13 @@ const navLink = [
     icon: <FaHome size={25} />,
   },
   {
-    path: "/",
+    path: "/orderList",
     name: "Pesanan",
     linkActive: "order",
     icon: <FaFileInvoice size={25} />,
   },
   {
-    path: "/",
+    path: "/customerService",
     name: "Pelayanan Pelanggan",
     linkActive: "customerService",
     icon: <AiFillMessage size={25} />,
@@ -38,8 +38,9 @@ export default function Menu({ active }: { active: string }) {
           <li key={index} className="order-1">
             <Link
               href={doc.path}
-              className={`tooltip ${active === doc.linkActive ? "text-blue-600" : ""
-                }`}
+              className={`tooltip ${
+                active === doc.linkActive ? "text-blue-600" : ""
+              }`}
               data-tip={doc.name}
             >
               {doc.icon}
