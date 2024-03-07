@@ -9,7 +9,7 @@ export default async function UserLayout({
   activeLink,
 }: {
   children: ReactNode;
-  activeLink: string;
+  activeLink?: string;
 }) {
   const session: any = await getServerSession();
   if (!session) {

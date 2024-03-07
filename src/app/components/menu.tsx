@@ -30,7 +30,7 @@ const navLink = [
   },
 ];
 
-export default function Menu({ active }: { active: string }) {
+export default function Menu({ active }: { active?: string }) {
   return (
     <div className="w-full fixed bottom-0 pb-1 flex items-center justify-center z-10">
       <ul className="menu menu-horizontal bg-base-300 rounded-box flex items-center justify-center gap-6 relative shadow-xl">

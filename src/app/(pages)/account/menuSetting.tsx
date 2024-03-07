@@ -5,42 +5,20 @@ import { FaBell, FaInfoCircle, FaThList } from "react-icons/fa";
 import { FaUnlockKeyhole } from "react-icons/fa6";
 import { PiNotebookFill } from "react-icons/pi";
 import { RiRefreshFill } from "react-icons/ri";
+import Withdraw from "./withdraw";
+import WithdrawList from "./withdrawList";
+import RechargeList from "./rechargeList";
+import BillList from "./billList";
+import ManageLoginPassword from "./manageLoginPassword";
+import ManageWithdrawPassword from "./mangeWithdrawPassword";
+import SystemNotification from "./systemNotification";
+import NewNotification from "./newNotification";
 
 const menuLink = [
   {
-    path: "/account",
-    icon: <BiMoneyWithdraw size={25} />,
-    name: "Penarikan Dana",
-  },
-  {
-    path: "/account",
-    icon: <PiNotebookFill size={25} />,
-    name: "Catatan Penarikan",
-  },
-  {
-    path: "/account",
-    icon: <FaThList size={25} />,
-    name: "Memuat Ulang Rekaman",
-  },
-  {
-    path: "/account",
-    icon: <RiRefreshFill size={25} />,
-    name: "Catatan Perubahan Akun",
-  },
-  {
-    path: "/account",
-    icon: <FaInfoCircle size={25} />,
+    path: "/paymentMethod",
+    icon: <FaInfoCircle size={20} />,
     name: "Informasi Penarikan",
-  },
-  {
-    path: "/account",
-    icon: <FaBell size={25} />,
-    name: "Pengumuman",
-  },
-  {
-    path: "/account",
-    icon: <FaUnlockKeyhole size={25} />,
-    name: "Kelola Kata Sandi",
   },
 ];
 
@@ -49,6 +27,10 @@ export default function MenuSetting() {
     <div className="card bg-base-300 mt-6 text-white shadow-lg">
       <div className="card-body">
         <div className="flex flex-col gap-4">
+          <Withdraw />
+          <WithdrawList />
+          <RechargeList />
+          <BillList />
           {menuLink.map((doc, index) => (
             <Link
               key={index}
@@ -57,11 +39,15 @@ export default function MenuSetting() {
             >
               <div className="flex items-center gap-3">
                 <div className="bg-blue-500/80 p-3 rounded-xl">{doc.icon}</div>
-                <p>{doc.name}</p>
+                <p className="text-sm md:text-base">{doc.name}</p>
               </div>
-              <div className="text-blue-500 font-bold text-lg">{">"}</div>
+              <div className="text-blue-500 font-bold">{">"}</div>
             </Link>
           ))}
+          <NewNotification />
+          <SystemNotification />
+          <ManageLoginPassword />
+          <ManageWithdrawPassword />
 
           <Logout />
         </div>

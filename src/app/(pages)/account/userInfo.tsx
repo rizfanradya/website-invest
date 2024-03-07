@@ -1,6 +1,5 @@
-import Link from "next/link";
+import Topup from "@/app/components/topup";
 import { FaUserAlt } from "react-icons/fa";
-import { FaCirclePlus } from "react-icons/fa6";
 
 export default function UserInfo({
   doc,
@@ -12,8 +11,8 @@ export default function UserInfo({
       <div className="card bg-sky-600 text-white shadow-lg">
         <div className="card-body">
           <div className="flex items-center gap-4">
-            <FaUserAlt size={50} />
-            <p className="text-2xl">
+            <FaUserAlt size={40} />
+            <p className="md:text-2xl">
               {doc.noHp}{" "}
               <span className="text-slate-400">
                 {doc.balance >= 30000
@@ -34,15 +33,15 @@ export default function UserInfo({
           <div>
             <div className="border-b pb-4 border-slate-500 flex justify-between">
               <div>
-                <div className="text-4xl mb-2">
+                <div className="text-2xl md:text-4xl">
                   Rp {doc.balance.toLocaleString("id-ID")}
                 </div>
-                <div className="text-slate-400">Saldo Rekening</div>
+                <div className="text-slate-400 text-xs md:text-base">
+                  Saldo Rekening
+                </div>
               </div>
 
-              <Link href={"/account"} className="text-blue-500">
-                <FaCirclePlus size={50} />
-              </Link>
+              <Topup />
             </div>
 
             <div className="grid grid-cols-3 mt-4 sm:mt-6 text-center text-xs sm:text-base">

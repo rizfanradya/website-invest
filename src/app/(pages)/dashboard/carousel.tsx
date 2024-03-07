@@ -28,7 +28,7 @@ export default function DashboardCarousel() {
       <Slider {...settings}>
         {dataCarousel.map((doc, index) => (
           <Image
-            className="h-44 md:h-64 object-cover rounded-xl mb-4"
+            className="h-36 md:h-56 object-cover rounded-xl mb-4"
             key={index}
             src={`/${doc.src}`}
             alt={doc.alt}
