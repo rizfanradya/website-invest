@@ -1,5 +1,4 @@
 import FormButton from "@/app/components/formButton";
-import { IoIosSend } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 
 export default function DeletePaymentMethod({ doc }: { doc: { id: number } }) {
@@ -33,7 +32,7 @@ export default function DeletePaymentMethod({ doc }: { doc: { id: number } }) {
               >
                 Close
               </label>
-              <FormButton text="Kirimkan" icon={<IoIosSend size={20} />} />
+              <FormButton text="Hapus" icon={<MdDelete size={20} />} />
             </div>
           </form>
         </div>
