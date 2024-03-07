@@ -22,7 +22,7 @@ export default function Partner() {
             width={500}
             height={500}
             key={index}
-            className="w-full rounded-2xl"
+            className="h-full rounded-2xl"
           />
         ))}
       </div>

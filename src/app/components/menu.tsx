@@ -49,7 +49,7 @@ export default function Menu({ active }: { active: string }) {
         ))}
 
         <li className="absolute -top-6 bg-base-300 rounded-full order-2">
-          <Link href={"/"}>
+          <Link href={"/grabOrder"}>
             <Image
               src={"/logoimg.png"}
               alt="logo"
