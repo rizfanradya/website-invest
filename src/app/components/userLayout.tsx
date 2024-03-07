@@ -20,7 +20,7 @@ export default async function UserLayout({
     <>
       <Navbar />
       <Menu active={activeLink} />
-      <div className="px-4 py-16">{children}</div>
+      <div className="px-4 py-20">{children}</div>
     </>
   );
 }

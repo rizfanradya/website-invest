@@ -27,7 +27,7 @@ export default function OrderListLayout({
           <Link
             key={index}
             href={`/orderList/${doc.path}`}
-            className={`border p-1 border-info text-sm ${
+            className={`border py-1 border-info text-xs md:text-base ${
               activeLink === doc.path && "bg-info text-white"
             }`}
           >
