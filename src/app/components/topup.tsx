@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaCirclePlus } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
 
-export default function AddBalance() {
+export default function Topup() {
   return (
     <>
       <label htmlFor="my_modal_7" className="text-info cursor-pointer">
@@ -13,12 +13,7 @@ export default function AddBalance() {
       <input type="checkbox" id="my_modal_7" className="modal-toggle" />
       <div className="modal" role="dialog">
         <div className="modal-box">
-          <div className="flex justify-between">
-            <h3 className="text-lg font-bold">Isi Saldo</h3>
-            <Link href={"/rechargeList"} className="underline link text-info">
-              Catatan
-            </Link>
-          </div>
+          <h3 className="text-lg font-bold">Isi Saldo</h3>
 
           <form className="mt-8 flex flex-col gap-4">
             <div className="flex gap-3 text-xs md:text-base">

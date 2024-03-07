@@ -5,28 +5,32 @@ import { FaBell, FaInfoCircle, FaThList } from "react-icons/fa";
 import { FaUnlockKeyhole } from "react-icons/fa6";
 import { PiNotebookFill } from "react-icons/pi";
 import { RiRefreshFill } from "react-icons/ri";
+import Withdraw from "./withdraw";
+import WithdrawList from "./withdrawList";
+import RechargeList from "./rechargeList";
+import BillList from "./billList";
 
 const menuLink = [
-  {
-    path: "/account",
-    icon: <BiMoneyWithdraw size={20} />,
-    name: "Penarikan Dana",
-  },
-  {
-    path: "/account",
-    icon: <PiNotebookFill size={20} />,
-    name: "Catatan Penarikan",
-  },
-  {
-    path: "/account",
-    icon: <FaThList size={20} />,
-    name: "Memuat Ulang Rekaman",
-  },
-  {
-    path: "/account",
-    icon: <RiRefreshFill size={20} />,
-    name: "Catatan Perubahan Akun",
-  },
+  // {
+  //   path: "/account",
+  //   icon: <BiMoneyWithdraw size={20} />,
+  //   name: "Penarikan Dana",
+  // },
+  // {
+  //   path: "/account",
+  //   icon: <PiNotebookFill size={20} />,
+  //   name: "Catatan Penarikan",
+  // },
+  // {
+  //   path: "/account",
+  //   icon: <FaThList size={20} />,
+  //   name: "Memuat Ulang Rekaman",
+  // },
+  // {
+  //   path: "/account",
+  //   icon: <RiRefreshFill size={20} />,
+  //   name: "Catatan Perubahan Akun",
+  // },
   {
     path: "/account",
     icon: <FaInfoCircle size={20} />,
@@ -49,6 +53,10 @@ export default function MenuSetting() {
     <div className="card bg-base-300 mt-6 text-white shadow-lg">
       <div className="card-body">
         <div className="flex flex-col gap-4">
+          <Withdraw />
+          <WithdrawList />
+          <RechargeList />
+          <BillList />
           {menuLink.map((doc, index) => (
             <Link
               key={index}

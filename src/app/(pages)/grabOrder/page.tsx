@@ -1,7 +1,7 @@
 import UserLayout from "@/app/components/userLayout";
-import AddBalance from "./addBalance";
 import { PiHandTapFill } from "react-icons/pi";
 import GrabOrderUserIncomeNotifyCarousel from "./userIncomeNotifyCarousel";
+import Topup from "@/app/components/topup";
 
 export default function GrabOrder() {
   return (
@@ -12,7 +12,7 @@ export default function GrabOrder() {
           <span className="md:text-4xl text-xl font-medium">Rp 30.000</span>
           <span className="text-xs">Saldo Rekening</span>
         </div>
-        <AddBalance />
+        <Topup />
       </div>
 
       <div className="card bg-info text-white shadow-xl">

@@ -1,6 +1,5 @@
-import Link from "next/link";
+import Topup from "@/app/components/topup";
 import { FaUserAlt } from "react-icons/fa";
-import { FaCirclePlus } from "react-icons/fa6";
 
 export default function UserInfo({
   doc,
@@ -42,9 +41,7 @@ export default function UserInfo({
                 </div>
               </div>
 
-              <Link href={"/account"} className="text-blue-500">
-                <FaCirclePlus size={40} />
-              </Link>
+              <Topup />
             </div>
 
             <div className="grid grid-cols-3 mt-4 sm:mt-6 text-center text-xs sm:text-base">
