@@ -12,6 +12,10 @@
     "hoststart": "npx prisma migrate dev && npx prisma db push && npx prisma generate && next build && pm2 start npm --name website-invest -- start"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@mui/x-charts": "^6.19.5",
+    "@mui/x-data-grid": "^6.19.6",
     "@prisma/client": "^5.10.2",
     "@types/bcrypt": "^5.0.2",
     "@types/react-slick": "^0.23.13",
@@ -28,6 +32,8 @@
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.10.5",
+    "tailwind": "^4.0.0",
+    "tailwind-merge": "^2.2.1",
     "validator": "^13.11.0"
   },
   "devDependencies": {
