@@ -9,42 +9,16 @@ import Withdraw from "./withdraw";
 import WithdrawList from "./withdrawList";
 import RechargeList from "./rechargeList";
 import BillList from "./billList";
+import ManageLoginPassword from "./manageLoginPassword";
+import ManageWithdrawPassword from "./mangeWithdrawPassword";
+import SystemNotification from "./systemNotification";
+import NewNotification from "./newNotification";
 
 const menuLink = [
-  // {
-  //   path: "/account",
-  //   icon: <BiMoneyWithdraw size={20} />,
-  //   name: "Penarikan Dana",
-  // },
-  // {
-  //   path: "/account",
-  //   icon: <PiNotebookFill size={20} />,
-  //   name: "Catatan Penarikan",
-  // },
-  // {
-  //   path: "/account",
-  //   icon: <FaThList size={20} />,
-  //   name: "Memuat Ulang Rekaman",
-  // },
-  // {
-  //   path: "/account",
-  //   icon: <RiRefreshFill size={20} />,
-  //   name: "Catatan Perubahan Akun",
-  // },
   {
-    path: "/account",
+    path: "/paymentMethod",
     icon: <FaInfoCircle size={20} />,
     name: "Informasi Penarikan",
-  },
-  {
-    path: "/account",
-    icon: <FaBell size={20} />,
-    name: "Pengumuman",
-  },
-  {
-    path: "/account",
-    icon: <FaUnlockKeyhole size={20} />,
-    name: "Kelola Kata Sandi",
   },
 ];
 
@@ -70,6 +44,10 @@ export default function MenuSetting() {
               <div className="text-blue-500 font-bold">{">"}</div>
             </Link>
           ))}
+          <NewNotification />
+          <SystemNotification />
+          <ManageLoginPassword />
+          <ManageWithdrawPassword />
 
           <Logout />
         </div>
