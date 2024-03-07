@@ -31,6 +31,7 @@ export default function CustomerService() {
 
           <Link
             href={"https://web.telegram.org/"}
+            target="blank"
             className="m-auto text-center"
           >
             <FaTelegram size={50} className="text-info m-auto" />
