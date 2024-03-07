@@ -13,7 +13,7 @@ export default function CustomerService() {
       </div>
 
       <div className="card shadow-lg bg-base-200">
-        <div className="card-body grid gap-6 text-sm md:text-base">
+        <div className="card-body grid gap-6 text-xs md:text-base">
           <p>
             pemberitahuan kepada seluruh pengguna,Waktu penyelesaian pesanan
             adalah 2 jam.

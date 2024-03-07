@@ -28,19 +28,16 @@ const dataRegisterArea = [
 export default function RegisterArea() {
   return (
     <div className="mt-8">
-      <h1 className="font-semibold text-xl">Register Area</h1>
+      <h1 className="font-semibold md:text-xl">Register Area</h1>
 
       {dataRegisterArea.map((doc, index) => (
-        <div
-          key={index}
-          className="card bg-sky-600 text-white shadow-lg mt-4"
-        >
+        <div key={index} className="card bg-sky-600 text-white shadow-lg mt-4">
           <div className="card-body">
-            <div className="font-medium mb-4 text-2xl flex justify-between items-center">
+            <div className="font-medium mb-4 md:text-2xl flex justify-between items-center">
               <div>{doc.name}</div>
               <div>{doc.level}</div>
             </div>
-            <div className="text-white/70">
+            <div className="text-white/70 text-sm">
               <p>Rp {doc.balance.toLocaleString("id-ID")}</p>
               <p>Tarif komisi: {doc.commissionRates}%</p>
               <p>Jumlah pesanan: {doc.orderQuantity}/Langit</p>

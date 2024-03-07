@@ -2,13 +2,13 @@ export default async function UserInfo({ doc }: any) {
   return (
     <div className="card bg-base-300 shadow-lg">
       <div className="card-body">
-        <div className="flex justify-between">
+        <div className="flex justify-between text-sm md:text-basex">
           <p>{doc.noHp}</p>
           <p>216300</p>
         </div>
 
-        <p>Saldo rekening</p>
-        <p className="font-semibold text-2xl">
+        <p className="text-sm md:text-base">Saldo rekening</p>
+        <p className="font-semibold md:text-2xl">
           Rp {doc.balance.toLocaleString("id-ID")}
         </p>
 

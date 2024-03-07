@@ -3,24 +3,27 @@ import { useFormStatus } from "react-dom";
 
 export default function FormButton({
   text,
-  color = "primary",
+  color,
+  icon,
 }: {
   text: string;
   color?: string;
+  icon?: any;
 }) {
   const { pending } = useFormStatus();
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 mt-4">
+    <>
       {pending ? (
-        <div className={`btn btn-${color} rounded-2xl text-white w-full`}>
+        <div className={`btn ${color ? color : "btn-success"}`}>
           <span className="loading loading-spinner"></span>
         </div>
       ) : (
-        <button className={`btn btn-${color} rounded-2xl text-white w-full`}>
+        <button className={`btn ${color ? color : "btn-success"}`}>
+          {icon && icon}
           {text}
         </button>
       )}
-    </div>
+    </>
   );
 }

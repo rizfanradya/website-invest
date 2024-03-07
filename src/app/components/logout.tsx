@@ -16,11 +16,11 @@ export default function Logout() {
     >
       <div className="flex items-center gap-3">
         <div className="bg-red-500/80 p-3 rounded-xl">
-          <FaPowerOff size={25} />
+          <FaPowerOff size={20} />
         </div>
-        <p className="text-red-500">Keluar</p>
+        <p className="text-red-500 text-sm md:text-base">Keluar</p>
       </div>
-      <div className="text-blue-500 font-bold text-lg">{">"}</div>
+      <div className="text-blue-500 font-bold">{">"}</div>
     </div>
   );
 }

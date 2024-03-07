@@ -9,37 +9,37 @@ import { RiRefreshFill } from "react-icons/ri";
 const menuLink = [
   {
     path: "/account",
-    icon: <BiMoneyWithdraw size={25} />,
+    icon: <BiMoneyWithdraw size={20} />,
     name: "Penarikan Dana",
   },
   {
     path: "/account",
-    icon: <PiNotebookFill size={25} />,
+    icon: <PiNotebookFill size={20} />,
     name: "Catatan Penarikan",
   },
   {
     path: "/account",
-    icon: <FaThList size={25} />,
+    icon: <FaThList size={20} />,
     name: "Memuat Ulang Rekaman",
   },
   {
     path: "/account",
-    icon: <RiRefreshFill size={25} />,
+    icon: <RiRefreshFill size={20} />,
     name: "Catatan Perubahan Akun",
   },
   {
     path: "/account",
-    icon: <FaInfoCircle size={25} />,
+    icon: <FaInfoCircle size={20} />,
     name: "Informasi Penarikan",
   },
   {
     path: "/account",
-    icon: <FaBell size={25} />,
+    icon: <FaBell size={20} />,
     name: "Pengumuman",
   },
   {
     path: "/account",
-    icon: <FaUnlockKeyhole size={25} />,
+    icon: <FaUnlockKeyhole size={20} />,
     name: "Kelola Kata Sandi",
   },
 ];
@@ -57,9 +57,9 @@ export default function MenuSetting() {
             >
               <div className="flex items-center gap-3">
                 <div className="bg-blue-500/80 p-3 rounded-xl">{doc.icon}</div>
-                <p>{doc.name}</p>
+                <p className="text-sm md:text-base">{doc.name}</p>
               </div>
-              <div className="text-blue-500 font-bold text-lg">{">"}</div>
+              <div className="text-blue-500 font-bold">{">"}</div>
             </Link>
           ))}
 
