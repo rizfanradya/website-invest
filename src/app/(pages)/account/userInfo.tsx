@@ -28,7 +28,7 @@ export default function UserInfo({
         </div>
       </div>
 
-      <div className="card bg-white mt-4">
+      <div className="card bg-white text-black mt-4">
         <div className="card-body">
           <div>
             <div className="border-b pb-4 border-slate-500 flex justify-between">

@@ -24,7 +24,7 @@ export default function ManageLoginPassword() {
         className="modal-toggle"
       />
       <div className="modal" role="dialog">
-        <div className="modal-box">
+        <div className="modal-box bg-white text-black">
           <h3 className="text-lg font-bold mb-4">Kelola Kata Sandi Masuk</h3>
 
           <form className="flex flex-col gap-4">
@@ -36,7 +36,7 @@ export default function ManageLoginPassword() {
                 type="password"
                 name="oldPassword"
                 required
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
               />
             </div>
 
@@ -48,7 +48,7 @@ export default function ManageLoginPassword() {
                 type="password"
                 name="newPassword"
                 required
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
               />
             </div>
 
@@ -60,7 +60,7 @@ export default function ManageLoginPassword() {
                 type="password"
                 name="confNewPassword"
                 required
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
               />
             </div>
 

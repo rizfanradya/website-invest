@@ -11,7 +11,7 @@ export default function CreateNewPaymentMethod() {
 
       <input type="checkbox" id="my_modal_7" className="modal-toggle" />
       <div className="modal" role="dialog">
-        <div className="modal-box">
+        <div className="modal-box bg-white text-black">
           <h3 className="text-lg font-bold mb-4">Tambah Informasi Penarikan</h3>
 
           <form className="flex flex-col gap-4">
@@ -20,7 +20,7 @@ export default function CreateNewPaymentMethod() {
                 Jenis Nomor Kartu
               </label>
               <select
-                className="select select-bordered w-full"
+                className="select select-bordered w-full bg-transparent"
                 id="cardType"
                 required
                 name="cardType"
@@ -38,7 +38,7 @@ export default function CreateNewPaymentMethod() {
               <input
                 required
                 id="nameAccount"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
                 name="nameAccount"
               />
             </div>
@@ -51,7 +51,7 @@ export default function CreateNewPaymentMethod() {
                 required
                 type="tel"
                 id="backupMobileNumber"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
                 name="backupMobileNumber"
               />
             </div>
@@ -63,7 +63,7 @@ export default function CreateNewPaymentMethod() {
               <input
                 required
                 id="bankName"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
                 name="bankName"
               />
             </div>
@@ -75,7 +75,7 @@ export default function CreateNewPaymentMethod() {
               <input
                 required
                 id="rekeningBank"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
                 name="rekeningBank"
               />
             </div>
@@ -88,7 +88,7 @@ export default function CreateNewPaymentMethod() {
                 required
                 type="password"
                 id="withdrawPassword"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
                 name="withdrawPassword"
               />
             </div>

@@ -19,7 +19,7 @@ export default function SystemNotification() {
 
       <input type="checkbox" id="systemNotification" className="modal-toggle" />
       <div className="modal" role="dialog">
-        <div className="modal-box">
+        <div className="modal-box bg-white text-black">
           <h3 className="text-lg font-bold mb-4">Pemberitahuan Sistem</h3>
 
           <div className="card bg-blue-600 shadow-xl">

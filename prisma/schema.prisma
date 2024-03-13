@@ -27,4 +27,5 @@ model user {
   yesterdayIncome  Int
   cumulativeIncome Int
   teamBenefit      Int
+  role             String
 }

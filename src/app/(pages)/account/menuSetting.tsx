@@ -24,7 +24,7 @@ const menuLink = [
 
 export default function MenuSetting() {
   return (
-    <div className="card bg-white mt-6">
+    <div className="card bg-white text-black mt-6">
       <div className="card-body">
         <div className="flex flex-col gap-4">
           <Withdraw />

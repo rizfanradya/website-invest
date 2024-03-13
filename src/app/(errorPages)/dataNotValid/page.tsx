@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { VscError } from "react-icons/vsc";
 
-export default function RegisterDataNotValid() {
+export default function DataNotValid() {
   const router = useRouter();
 
   return (
@@ -16,7 +16,7 @@ export default function RegisterDataNotValid() {
           <p className="py-4 text-2xl">Data Not Valid</p>
           <div
             className="btn btn-primary text-white text-lg"
-            onClick={() => router.push("/register")}
+            onClick={() => router.back()}
           >
             OK
           </div>

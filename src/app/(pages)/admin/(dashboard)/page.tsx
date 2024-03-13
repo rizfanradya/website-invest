@@ -4,7 +4,9 @@ export default function Dashboard() {
   return (
     <AdminLayout>
       <title>Blibli - Admin Dashboard</title>
-      <div></div>
+      <div className="w-full font-bold uppercase h-screen flex items-center justify-center text-4xl">
+        Dashboard
+      </div>
     </AdminLayout>
   );
 }

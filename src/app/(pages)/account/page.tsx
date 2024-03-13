@@ -1,7 +1,7 @@
 import UserInfo from "./userInfo";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import prisma from "@/utils/prisma";
+import prisma from "@/utils/db";
 import MenuSetting from "./menuSetting";
 import UserLayout from "@/app/components/userLayout";
 

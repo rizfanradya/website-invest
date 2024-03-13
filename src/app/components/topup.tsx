@@ -12,7 +12,7 @@ export default function Topup() {
 
       <input type="checkbox" id="my_modal_7" className="modal-toggle" />
       <div className="modal" role="dialog">
-        <div className="modal-box">
+        <div className="modal-box bg-white">
           <h3 className="text-lg font-bold">Isi Saldo</h3>
 
           <form className="mt-8 flex flex-col gap-4">
@@ -41,7 +41,7 @@ export default function Topup() {
                 required
                 id="bankCard"
                 name="bankCard"
-                className="select select-bordered w-full"
+                className="select select-bordered w-full bg-transparent"
               >
                 <option>BANK 1</option>
                 <option>BANK 2</option>
@@ -55,7 +55,7 @@ export default function Topup() {
               </label>
               <input
                 id="topup"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
                 name="topupAmount"
                 required
                 type="number"
@@ -68,7 +68,7 @@ export default function Topup() {
               </label>
               <input
                 id="voucher"
-                className="file-input file-input-bordered w-full"
+                className="file-input file-input-bordered w-full bg-transparent"
                 name="voucher"
                 required
                 type="file"

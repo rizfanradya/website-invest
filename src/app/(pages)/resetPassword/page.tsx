@@ -1,7 +1,7 @@
 import LoginRegisterRouteSecure from "@/app/components/loginRegisterRouteSecure";
 import Image from "next/image";
 import Link from "next/link";
-import prisma from "@/utils/prisma";
+import prisma from "@/utils/db";
 import { FaUserAlt } from "react-icons/fa";
 import { FaKey } from "react-icons/fa6";
 import bcrypt from "bcrypt";

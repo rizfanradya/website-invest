@@ -7,7 +7,7 @@ export default function GrabOrder() {
   return (
     <UserLayout>
       <title>Blibli71 - Grab Order</title>
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mb-6 text-black">
         <div className="flex flex-col">
           <span className="md:text-4xl text-xl font-medium">Rp 30.000</span>
           <span className="text-xs">Saldo Rekening</span>
@@ -58,7 +58,7 @@ export default function GrabOrder() {
 
       <GrabOrderUserIncomeNotifyCarousel />
 
-      <div className="text-xs md:text-sm my-4">
+      <div className="text-xs md:text-sm my-4 text-black">
         When you click to place an order, the mall will automatically execute
         the ordering task. You need to complete the application. Each commission
         will be automatically added after the order is completed. Complete the

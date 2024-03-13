@@ -1,10 +1,39 @@
+import prisma from "@/utils/db";
+import { getServerSession } from "next-auth";
 import Image from "next/image";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { ReactNode } from "react";
+import { FaHome, FaUserAlt } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
+import AdminLogout from "./adminLogout";
 
-export default function AdminLayout({ children }: { children: ReactNode }) {
+const linkItems = [
+  { name: "Dashboard", path: "", icon: <FaHome size={20} /> },
+  {
+    name: "User Management",
+    path: "userManagement",
+    icon: <FaUserAlt size={20} />,
+  },
+];
+
+export default async function AdminLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  const session: any = await getServerSession();
+  if (!session) {
+    redirect("/login");
+  }
+  const user = await prisma.user.findUnique({
+    where: { id: session.user.name },
+  });
+  if (user?.role === "user") {
+    redirect("/");
+  }
+
   return (
     <>
       <div className="navbar bg-white px-4 md:px-10">
@@ -25,7 +54,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
       <div className="drawer">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
-          <div className="px-4">{children}</div>
+          <div className="p-4">{children}</div>
         </div>
         <div className="drawer-side">
           <label
@@ -46,12 +75,16 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
               </label>
             </div>
 
-            <li>
-              <a>Sidebar Item 1</a>
-            </li>
-            <li>
-              <a>Sidebar Item 2</a>
-            </li>
+            {linkItems.map((doc) => (
+              <li key={doc.path}>
+                <Link href={`/admin/${doc.path}`} className="text-slate-600">
+                  {doc.icon}
+                  {doc.name}
+                </Link>
+              </li>
+            ))}
+
+            <AdminLogout />
           </ul>
         </div>
       </div>

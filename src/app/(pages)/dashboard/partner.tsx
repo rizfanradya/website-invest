@@ -12,7 +12,7 @@ const dataPartner = [
 export default function Partner() {
   return (
     <div className="mb-24 mt-8">
-      <h1 className="font-semibold md:text-xl mb-4">Mitra</h1>
+      <h1 className="font-semibold md:text-xl mb-4 text-black">Mitra</h1>
 
       <div className="grid grid-cols-3 gap-4">
         {dataPartner.map((doc, index) => (

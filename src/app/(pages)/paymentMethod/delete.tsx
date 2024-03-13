@@ -17,7 +17,7 @@ export default function DeletePaymentMethod({ doc }: { doc: { id: number } }) {
         className="modal-toggle"
       />
       <div className="modal" role="dialog">
-        <div className="modal-box">
+        <div className="modal-box bg-white text-black">
           <h3 className="text-lg font-bold mb-4">Hapus Informasi Penarikan</h3>
           <p className="py-2">
             Apakah anda yakin ingin menghapus informasi penarikan ini?
