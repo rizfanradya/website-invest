@@ -29,7 +29,7 @@ export default function GrabOrderUserIncomeNotifyCarousel() {
   return (
     <Slider {...settings}>
       {dataCarousel.map((doc, index) => (
-        <div key={index} className="card shadow-xl bg-base-200 my-4">
+        <div key={index} className="card bg-white my-4">
           <div className="card-body">
             <div className="flex items-center gap-8 text-xs md:text-base">
               <div>{doc.date}</div>

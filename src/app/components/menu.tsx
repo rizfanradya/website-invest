@@ -33,7 +33,7 @@ const navLink = [
 export default function Menu({ active }: { active?: string }) {
   return (
     <div className="w-full fixed bottom-0 pb-1 flex items-center justify-center z-10">
-      <ul className="menu menu-horizontal bg-base-300 rounded-box flex items-center justify-center gap-6 relative shadow-xl">
+      <ul className="menu menu-horizontal bg-white rounded-box flex items-center justify-center gap-6 relative shadow-xl">
         {navLink.map((doc, index) => (
           <li key={index} className="order-1">
             <Link
@@ -48,7 +48,7 @@ export default function Menu({ active }: { active?: string }) {
           </li>
         ))}
 
-        <li className="absolute -top-6 bg-base-300 rounded-full order-2">
+        <li className="absolute -top-6 bg-white rounded-full order-2">
           <Link href={"/grabOrder"}>
             <Image
               src={"/logoimg.png"}

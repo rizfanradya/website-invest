@@ -21,7 +21,7 @@ export default function RechargeList() {
         <div className="modal-box">
           <h3 className="text-lg font-bold mb-4">Memuat Ulang Rekaman</h3>
 
-          <div className="card shadow-xl bg-blue-600">
+          <div className="card shadow-xl text-white bg-blue-600">
             <div className="card-body px-4">
               <div className="flex text-xs md:text-base gap-2">
                 <div className="flex flex-col">

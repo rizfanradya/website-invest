@@ -9,7 +9,7 @@ export default function PaymentMethod() {
       <title>Blibli71 - Informasi Penarikan</title>
       <CreateNewPaymentMethod />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <div className="card bg-base-300 shadow-lg">
+        <div className="card bg-white">
           <div className="card-body p-4">
             <div className="text-sm flex gap-2">
               <div className="flex flex-col">

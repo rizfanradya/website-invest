@@ -23,7 +23,7 @@ export default function Withdraw() {
         <div className="modal-box">
           <h3 className="text-lg font-bold mb-4">Penarikan Dana</h3>
 
-          <div className="card bg-blue-600 shadow-xl">
+          <div className="card bg-blue-600 text-white shadow-xl">
             <div className="card-body text-center">
               <span className="font-medium text-2xl -mb-3">Rp 30.000</span>
               <span className="text-xs">Saldo Rekening</span>

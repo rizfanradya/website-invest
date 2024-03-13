@@ -1,6 +1,6 @@
 export default async function UserInfo({ doc }: any) {
   return (
-    <div className="card bg-base-300 shadow-lg">
+    <div className="card bg-white shadow-lg">
       <div className="card-body">
         <div className="flex justify-between text-sm md:text-basex">
           <p>{doc.noHp}</p>
