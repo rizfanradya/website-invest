@@ -47,7 +47,7 @@ export default async function DeleteUser({ doc }: { doc: { id: number } }) {
               name="id"
               required
               className="hidden"
-              value={doc.id}
+              defaultValue={doc.id}
             />
 
             <div className="modal-action">

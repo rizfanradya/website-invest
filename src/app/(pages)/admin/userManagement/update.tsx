@@ -98,7 +98,7 @@ export default async function UpdateUser({
               name="id"
               required
               className="hidden"
-              value={doc.id}
+              defaultValue={doc.id}
             />
 
             <div className="flex flex-col">
