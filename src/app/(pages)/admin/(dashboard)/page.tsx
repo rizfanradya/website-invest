@@ -5,7 +5,7 @@ export default function Dashboard() {
     <AdminLayout>
       <title>Blibli - Admin Dashboard</title>
       <div className="w-full font-bold uppercase h-screen flex items-center justify-center text-4xl">
-        Dashboard
+        Dashboards
       </div>
     </AdminLayout>
   );
