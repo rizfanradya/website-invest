@@ -8,7 +8,7 @@ export default function UserInfo({
 }) {
   return (
     <>
-      <div className="card bg-sky-600 text-white shadow-lg">
+      <div className="card bg-sky-600 text-white">
         <div className="card-body">
           <div className="flex items-center gap-4">
             <FaUserAlt size={40} />
@@ -28,7 +28,7 @@ export default function UserInfo({
         </div>
       </div>
 
-      <div className="card bg-base-300 mt-4 text-white shadow-lg">
+      <div className="card bg-white text-black mt-4">
         <div className="card-body">
           <div>
             <div className="border-b pb-4 border-slate-500 flex justify-between">

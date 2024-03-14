@@ -20,10 +20,10 @@ export default function Withdraw() {
 
       <input type="checkbox" id="withdraw" className="modal-toggle" />
       <div className="modal" role="dialog">
-        <div className="modal-box">
+        <div className="modal-box bg-white">
           <h3 className="text-lg font-bold mb-4">Penarikan Dana</h3>
 
-          <div className="card bg-blue-600 shadow-xl">
+          <div className="card bg-blue-600 text-white shadow-xl">
             <div className="card-body text-center">
               <span className="font-medium text-2xl -mb-3">Rp 30.000</span>
               <span className="text-xs">Saldo Rekening</span>
@@ -40,7 +40,7 @@ export default function Withdraw() {
               <select
                 name="bank"
                 id="bank"
-                className="select select-bordered w-full"
+                className="select select-bordered w-full bg-transparent"
                 required
               >
                 <option>BANK 1</option>
@@ -57,7 +57,7 @@ export default function Withdraw() {
                 required
                 type="number"
                 name="totalWithdraw"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
               />
             </div>
 
@@ -69,7 +69,7 @@ export default function Withdraw() {
                 required
                 type="password"
                 name="passwordWithdraw"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
               />
             </div>
 

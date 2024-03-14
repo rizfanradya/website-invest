@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <AuthProvider>
-      <html lang="en">
+      <html lang="en" className="bg-slate-200" data-theme="light">
         <body className={poppins.className}>{children}</body>
       </html>
     </AuthProvider>

@@ -18,7 +18,7 @@ export default function WithdrawList() {
 
       <input type="checkbox" id="withdrawList" className="modal-toggle" />
       <div className="modal" role="dialog">
-        <div className="modal-box">
+        <div className="modal-box bg-white">
           <h3 className="text-lg font-bold mb-4">Catatan Penarikan</h3>
 
           <p>Tidak ada catatan</p>

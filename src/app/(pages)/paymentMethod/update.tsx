@@ -18,7 +18,7 @@ export default function UpdatePaymentMethod({ doc }: { doc: { id: number } }) {
         className="modal-toggle"
       />
       <div className="modal" role="dialog">
-        <div className="modal-box">
+        <div className="modal-box bg-white text-black">
           <h3 className="text-lg font-bold mb-4">Edit Informasi Penarikan</h3>
 
           <form className="flex flex-col gap-4">
@@ -27,7 +27,7 @@ export default function UpdatePaymentMethod({ doc }: { doc: { id: number } }) {
                 Jenis Nomor Kartu
               </label>
               <select
-                className="select select-bordered w-full"
+                className="select select-bordered w-full bg-transparent"
                 id="cardType"
                 required
                 name="cardType"
@@ -45,7 +45,7 @@ export default function UpdatePaymentMethod({ doc }: { doc: { id: number } }) {
               <input
                 required
                 id="nameAccount"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
                 name="nameAccount"
                 defaultValue={"BANK"}
               />
@@ -59,7 +59,7 @@ export default function UpdatePaymentMethod({ doc }: { doc: { id: number } }) {
                 required
                 type="tel"
                 id="backupMobileNumber"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
                 name="backupMobileNumber"
                 defaultValue={"0813****7989"}
               />
@@ -72,7 +72,7 @@ export default function UpdatePaymentMethod({ doc }: { doc: { id: number } }) {
               <input
                 required
                 id="bankName"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
                 name="bankName"
                 defaultValue={"BRI"}
               />
@@ -85,7 +85,7 @@ export default function UpdatePaymentMethod({ doc }: { doc: { id: number } }) {
               <input
                 required
                 id="rekeningBank"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
                 name="rekeningBank"
                 defaultValue={"763476324544345"}
               />
@@ -99,7 +99,7 @@ export default function UpdatePaymentMethod({ doc }: { doc: { id: number } }) {
                 required
                 type="password"
                 id="withdrawPassword"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-transparent"
                 name="withdrawPassword"
               />
             </div>

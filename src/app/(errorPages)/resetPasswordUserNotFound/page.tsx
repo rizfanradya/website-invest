@@ -1,10 +1,7 @@
-"use client";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { VscError } from "react-icons/vsc";
 
 export default function ResetPasswordUserNotFound() {
-  const router = useRouter();
-
   return (
     <div className="flex items-center justify-center w-screen h-screen p-4">
       <title>Blibli - User Not Found</title>
@@ -14,12 +11,12 @@ export default function ResetPasswordUserNotFound() {
           <VscError size={100} className="text-error" />
           <h1 className="text-4xl font-semibold">Error</h1>
           <p className="py-4 text-2xl">User Not Found</p>
-          <div
+          <Link
+            href={"/resetPassword"}
             className="btn btn-primary text-white text-lg"
-            onClick={() => router.push("/resetPassword")}
           >
             OK
-          </div>
+          </Link>
         </div>
       </div>
     </div>

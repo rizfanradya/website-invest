@@ -1,7 +1,7 @@
 import DashboardCarousel from "./carousel";
 import UserInfo from "./userInfo";
 import RegisterArea from "./registerArea";
-import prisma from "@/utils/prisma";
+import prisma from "@/utils/db";
 import { getServerSession } from "next-auth";
 import UserIncomeNotify from "./userIncomeNotify";
 import Partner from "./partner";

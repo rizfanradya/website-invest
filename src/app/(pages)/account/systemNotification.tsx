@@ -19,11 +19,11 @@ export default function SystemNotification() {
 
       <input type="checkbox" id="systemNotification" className="modal-toggle" />
       <div className="modal" role="dialog">
-        <div className="modal-box">
+        <div className="modal-box bg-white text-black">
           <h3 className="text-lg font-bold mb-4">Pemberitahuan Sistem</h3>
 
           <div className="card bg-blue-600 shadow-xl">
-            <div className="card-body p-4">
+            <div className="card-body p-4 text-white">
               <div className="flex justify-between items-center">
                 <MdOutlineEmail size={35} className="text-red-500" />
                 <Link

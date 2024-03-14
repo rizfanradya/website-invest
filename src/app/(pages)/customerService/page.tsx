@@ -12,7 +12,7 @@ export default function CustomerService() {
         </div>
       </div>
 
-      <div className="card shadow-lg bg-base-200">
+      <div className="card shadow-lg bg-white text-black">
         <div className="card-body grid gap-6 text-xs md:text-base">
           <p>
             pemberitahuan kepada seluruh pengguna,Waktu penyelesaian pesanan

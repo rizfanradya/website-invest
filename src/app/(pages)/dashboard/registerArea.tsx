@@ -28,7 +28,7 @@ const dataRegisterArea = [
 export default function RegisterArea() {
   return (
     <div className="mt-8">
-      <h1 className="font-semibold md:text-xl">Register Area</h1>
+      <h1 className="font-semibold md:text-xl text-black">Register Area</h1>
 
       {dataRegisterArea.map((doc, index) => (
         <div key={index} className="card bg-sky-600 text-white shadow-lg mt-4">

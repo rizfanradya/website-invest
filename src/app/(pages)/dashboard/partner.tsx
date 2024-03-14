@@ -6,13 +6,13 @@ const dataPartner = [
   { image: "/partner/3.png" },
   { image: "/partner/4.png" },
   { image: "/partner/5.png" },
-  { image: "/partner/6.png" },
+  { image: "/partner/6.jpg" },
 ];
 
 export default function Partner() {
   return (
-    <div className="mb-24">
-      <h1 className="font-semibold md:text-xl mb-4">Mitra</h1>
+    <div className="mb-24 mt-8">
+      <h1 className="font-semibold md:text-xl mb-4 text-black">Mitra</h1>
 
       <div className="grid grid-cols-3 gap-4">
         {dataPartner.map((doc, index) => (

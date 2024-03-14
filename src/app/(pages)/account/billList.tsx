@@ -18,11 +18,11 @@ export default function BillList() {
 
       <input type="checkbox" id="billList" className="modal-toggle" />
       <div className="modal" role="dialog">
-        <div className="modal-box">
+        <div className="modal-box bg-white">
           <h3 className="text-lg font-bold mb-4">Catatan Perubahan Akun</h3>
 
           <div className="card shadow-xl bg-blue-600">
-            <div className="card-body px-4 grid md:grid-cols-2">
+            <div className="card-body px-4 grid md:grid-cols-2 text-white">
               <div className="flex flex-col">
                 <span className="font-light text-xs -mb-1 text-slate-300">
                   Jenis Perubahan Akun

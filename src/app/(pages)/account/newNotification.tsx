@@ -20,7 +20,7 @@ export default function NewNotification() {
 
       <input type="checkbox" id="newNotification" className="modal-toggle" />
       <div className="modal" role="dialog">
-        <div className="modal-box">
+        <div className="modal-box bg-white text-black">
           <h3 className="text-lg font-bold mb-4">Pemberitahuan Baru</h3>
 
           <p>Tidak ada notifikasi</p>
