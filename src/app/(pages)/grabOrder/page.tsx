@@ -71,7 +71,7 @@ export default function GrabOrder() {
         </div>
       </div>
 
-      <div className="card bg-white mt-4 text-white shadow-lg">
+      {/* <div className="card bg-white mt-4 text-white shadow-lg">
         <div className="card-body px-0">
           <div className="grid grid-cols-3 text-center text-xs sm:text-base">
             <div>
@@ -104,7 +104,7 @@ export default function GrabOrder() {
         will be automatically added after the order is completed. Complete the
         order task as soon as possible after receiving the order. If you have
         any questions, please contact your teacher.
-      </div>
+      </div> */}
     </UserLayout>
   );
 }
