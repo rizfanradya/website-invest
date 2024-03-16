@@ -8,6 +8,8 @@ import { FaHome, FaUserAlt } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
 import AdminLogout from "./adminLogout";
+import { TbAffiliate } from "react-icons/tb";
+import { SiManageiq } from "react-icons/si";
 
 const linkItems = [
   { name: "Dashboard", path: "", icon: <FaHome size={20} /> },
@@ -15,6 +17,16 @@ const linkItems = [
     name: "User Management",
     path: "userManagement",
     icon: <FaUserAlt size={20} />,
+  },
+  {
+    name: "Marketing",
+    path: "marketing",
+    icon: <TbAffiliate size={20} />,
+  },
+  {
+    name: "Management",
+    path: "management",
+    icon: <SiManageiq size={20} />,
   },
 ];
 
@@ -76,7 +88,7 @@ export default async function AdminLayout({
             </div>
 
             {linkItems.map((doc) => (
-              <li key={doc.path}>
+              <li key={doc.path} className="mb-2">
                 <Link href={`/admin/${doc.path}`} className="text-slate-600">
                   {doc.icon}
                   {doc.name}
