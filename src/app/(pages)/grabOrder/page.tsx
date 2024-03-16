@@ -2,10 +2,13 @@ import UserLayout from "@/app/components/userLayout";
 import { PiHandTapFill } from "react-icons/pi";
 import GrabOrderUserIncomeNotifyCarousel from "./userIncomeNotifyCarousel";
 import Topup from "@/app/components/topup";
+import Partner from "./partner";
+import PartnerScroll from "./partnerscroll";
+import Image from "next/image";
 
 export default function GrabOrder() {
   return (
-    <UserLayout>
+   <UserLayout>
       <title>Blibli71 - Grab Order</title>
       <div className="flex justify-between items-center mb-6 text-black">
         <div className="flex flex-col">
@@ -13,25 +16,13 @@ export default function GrabOrder() {
           <span className="text-xs">Saldo Rekening</span>
         </div>
         <Topup />
-      </div>
-
-      <div className="card bg-info text-white shadow-xl">
-        <div className="card-body">
-          <span className="md:text-4xl text-2xl font-medium">VIP 1</span>
-          <div className="flex flex-col">
-            <span className="font-medium md:text-2xl text-xl">
-              Saldo Minimal Rp 30.000
-            </span>
-            <span className="text-xs md:text-base">Komisi 20%</span>
-          </div>
-          <div className="md:text-4xl text-2xl text-center">
-            <span className="text-error font-semibold">0</span>
-            /20
-          </div>
-        </div>
-      </div>
-
-      <div className="card bg-white mt-4 text-white shadow-lg">
+      </div> 
+      <div className="card-body">
+  <Image src={"/banner.png"} alt="banner" width={100} height={50} style={{ width: "100%" }} />
+</div>
+         <PartnerScroll />
+          <Partner />
+       <div className="card bg-white mt-4 text-white shadow-lg">
         <div className="card-body px-0">
           <div className="grid grid-cols-3 text-center text-xs sm:text-base">
             <div>
