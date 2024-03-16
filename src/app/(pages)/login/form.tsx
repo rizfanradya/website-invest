@@ -52,7 +52,7 @@ export default function FormLogin() {
       className="text-start w-full mt-8 flex flex-col gap-4"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="flex items-center justify-between input input-bordered rounded-2xl">
+      <div className="flex bg-transparent items-center justify-between input input-bordered rounded-2xl">
         <input
           id="Username"
           type="text"
@@ -64,7 +64,7 @@ export default function FormLogin() {
         <FaUserAlt size={"1.5em"} className="text-slate-500" />
       </div>
 
-      <div className="flex items-center justify-between input input-bordered rounded-2xl">
+      <div className="flex bg-transparent items-center justify-between input input-bordered rounded-2xl">
         <input
           id="Password"
           type="password"

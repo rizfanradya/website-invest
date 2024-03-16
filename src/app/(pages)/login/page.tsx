@@ -13,7 +13,7 @@ export default async function Login() {
   return (
     <div className="flex justify-center items-center px-4 py-8">
       <title>Blibli - Login</title>
-      <div className="card max-w-sm bg-base-100">
+      <div className="card max-w-sm bg-white text-black">
         <div className="card-body">
           <div className="text-center flex flex-col items-center justify-center gap-2">
             <Image alt="logo" width={125} height={125} src={"/logo.png"} />
@@ -32,7 +32,7 @@ export default async function Login() {
               <p className="font-medium text-sm">Dont have any account?</p>
               <Link
                 href={"/register"}
-                className="text-primary font-semibold btn rounded-2xl bg-primary/20 hover:bg-primary/15"
+                className="font-semibold text-white btn rounded-2xl btn-primary"
               >
                 Register For Free Now
               </Link>

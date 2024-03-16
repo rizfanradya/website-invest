@@ -2,13 +2,20 @@ import UserLayout from "@/app/components/userLayout";
 import { PiHandTapFill } from "react-icons/pi";
 import GrabOrderUserIncomeNotifyCarousel from "./userIncomeNotifyCarousel";
 import Topup from "@/app/components/topup";
-import Partner from "./partner";
-import PartnerScroll from "./partnerscroll";
 import Image from "next/image";
+
+const dataPartner = [
+  { image: "1.png" },
+  { image: "2.png" },
+  { image: "3.png" },
+  { image: "4.png" },
+  { image: "5.png" },
+  { image: "6.jpg" },
+];
 
 export default function GrabOrder() {
   return (
-   <UserLayout>
+    <UserLayout>
       <title>Blibli71 - Grab Order</title>
       <div className="flex justify-between items-center mb-6 text-black">
         <div className="flex flex-col">
@@ -16,13 +23,55 @@ export default function GrabOrder() {
           <span className="text-xs">Saldo Rekening</span>
         </div>
         <Topup />
-      </div> 
-      <div className="card-body">
-  <Image src={"/banner.png"} alt="banner" width={100} height={50} style={{ width: "100%" }} />
-</div>
-         <PartnerScroll />
-          <Partner />
-       <div className="card bg-white mt-4 text-white shadow-lg">
+      </div>
+
+      <div className="max-h-96 overflow-hidden rounded-xl">
+        <Image
+          src={"/banner.png"}
+          alt="banner"
+          width={100}
+          height={100}
+          className="w-full"
+        />
+      </div>
+
+      <div className="my-8 flex gap-4 overflow-x-auto">
+        {dataPartner.map((doc, index) => (
+          <div key={index}>
+            <div className="w-48 h-32">
+              <Image
+                src={`/partner/${doc.image}`}
+                alt={doc.image}
+                width={100}
+                height={100}
+                className="rounded-lg w-full h-full"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="my-8">
+        <h1 className="font-semibold md:text-xl mb-4 text-black">
+          Paling Populer
+        </h1>
+
+        <div className="grid grid-cols-2 gap-2">
+          {dataPartner.map((doc, index) => (
+            <div className="h-20 sm:h-60 md:h-78 lg:h-30" key={index}>
+              <Image
+                src={`/partner/${doc.image}`}
+                alt={doc.image}
+                width={500}
+                height={500}
+                className="rounded-xl m-auto h-full"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="card bg-white mt-4 text-white shadow-lg">
         <div className="card-body px-0">
           <div className="grid grid-cols-3 text-center text-xs sm:text-base">
             <div>

@@ -41,7 +41,7 @@ export default async function ResetPassword() {
   return (
     <div className="flex justify-center items-center px-4 py-8">
       <title>Blibli - Reset Password</title>
-      <div className="card max-w-sm bg-base-100">
+      <div className="card max-w-sm bg-white text-black">
         <div className="card-body">
           <div className="text-center flex flex-col items-center justify-center gap-2">
             <Image alt="logo" width={125} height={125} src={"/logo.png"} />
@@ -51,7 +51,7 @@ export default async function ResetPassword() {
               className="text-start w-full mt-8 flex flex-col gap-4"
               action={onSubmit}
             >
-              <div className="flex items-center justify-between input input-bordered rounded-2xl">
+              <div className="flex items-center justify-between input input-bordered rounded-2xl bg-transparent">
                 <input
                   id="Username"
                   type="text"
@@ -63,7 +63,7 @@ export default async function ResetPassword() {
                 <FaUserAlt size={"1.5em"} className="text-slate-500" />
               </div>
 
-              <div className="flex items-center justify-between input input-bordered rounded-2xl">
+              <div className="flex items-center justify-between input input-bordered rounded-2xl bg-transparent">
                 <input
                   id="Password"
                   type="password"
@@ -79,7 +79,11 @@ export default async function ResetPassword() {
                 Login
               </Link>
 
-              <FormButton text="Reset" />
+              <FormButton
+                text="Reset"
+                color="btn-primary"
+                textColor="text-white"
+              />
             </form>
           </div>
         </div>

@@ -74,7 +74,7 @@ export default async function Register() {
   return (
     <div className="flex justify-center items-center px-4 py-8">
       <title>Blibli - Register</title>
-      <div className="card max-w-sm bg-base-100">
+      <div className="card max-w-sm bg-white text-black">
         <div className="card-body">
           <div className="text-center flex flex-col items-center justify-center gap-2">
             <Image alt="logo" width={125} height={125} src={"/logo.png"} />
@@ -84,7 +84,7 @@ export default async function Register() {
               className="text-start w-full mt-8 flex flex-col gap-4"
               action={onSubmit}
             >
-              <div className="flex items-center justify-between input input-bordered rounded-2xl">
+              <div className="flex items-center justify-between input input-bordered rounded-2xl bg-transparent">
                 <input
                   id="Username"
                   type="text"
@@ -96,7 +96,7 @@ export default async function Register() {
                 <FaUserAlt size={"1.5em"} className="text-slate-500" />
               </div>
 
-              <div className="flex items-center justify-between input input-bordered rounded-2xl">
+              <div className="flex items-center justify-between input input-bordered rounded-2xl bg-transparent">
                 <input
                   id="Email"
                   type="email"
@@ -108,7 +108,7 @@ export default async function Register() {
                 <MdEmail size={"1.5em"} className="text-slate-500" />
               </div>
 
-              <div className="flex items-center justify-between input input-bordered rounded-2xl">
+              <div className="flex items-center justify-between input input-bordered rounded-2xl bg-transparent">
                 <input
                   id="nohp"
                   type="tel"
@@ -120,7 +120,7 @@ export default async function Register() {
                 <FaPhone size={"1.5em"} className="text-slate-500" />
               </div>
 
-              <div className="flex items-center justify-between input input-bordered rounded-2xl">
+              <div className="flex items-center justify-between input input-bordered rounded-2xl bg-transparent">
                 <input
                   id="Password"
                   type="password"
@@ -132,7 +132,7 @@ export default async function Register() {
                 <FaKey size={"1.5em"} className="text-slate-500" />
               </div>
 
-              <div className="flex items-center justify-between input input-bordered rounded-2xl">
+              <div className="flex items-center justify-between input input-bordered rounded-2xl bg-transparent">
                 <input
                   id="Kode Referral"
                   type="text"
@@ -144,7 +144,11 @@ export default async function Register() {
                 <BiSolidDiscount size={"1.5em"} className="text-slate-500" />
               </div>
 
-              <FormButton text="Register" />
+              <FormButton
+                text="Register"
+                color="btn-primary"
+                textColor="text-white"
+              />
             </form>
 
             <div className="mt-4 flex flex-col gap-10">
