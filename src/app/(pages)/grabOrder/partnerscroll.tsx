@@ -22,7 +22,7 @@ export default function PartnerScroll() {
                   src={doc.image}
                   alt={doc.image}
                   width={100}
-                  height={90}
+                  height={90} 
                   layout="responsive"
                   objectFit="cover"
                   className="rounded-lg"
