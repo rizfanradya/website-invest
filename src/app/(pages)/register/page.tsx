@@ -47,6 +47,7 @@ export default async function Register() {
                 cumulativeIncome: 0,
                 teamBenefit: 0,
                 role: "user",
+                status: true,
               },
             });
             return { status: false, message: "ok", response };

@@ -30,7 +30,11 @@ const authOptions: NextAuthOptions = {
         if (user.username) {
           const passwordMatch = await bcrypt.compare(password, user!.password);
           if (passwordMatch) {
-            return user;
+            if (user.status === false) {
+              throw new Error("banned");
+            } else {
+              return user;
+            }
           } else {
             return null;
           }

@@ -26,12 +26,21 @@ export default function FormLogin() {
         redirect: false,
       });
       if (response!.ok === false) {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Username atau password yang anda masukkan salah",
-          allowOutsideClick: false,
-        });
+        if (response?.error === "banned") {
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Akun Anda Telah di ban",
+            allowOutsideClick: false,
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Username atau password yang anda masukkan salah",
+            allowOutsideClick: false,
+          });
+        }
       } else if (response!.ok === true) {
         router.push("/");
       }
