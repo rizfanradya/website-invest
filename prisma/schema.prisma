@@ -14,10 +14,12 @@ datasource db {
 }
 
 model user {
-  id               Int      @id @default(autoincrement())
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
-  username         String   @unique
+  id               Int       @id @default(autoincrement())
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  purchases        userBuy[]
+  status           Boolean
+  username         String    @unique
   email            String
   password         String
   referral         String
@@ -28,4 +30,72 @@ model user {
   cumulativeIncome Int
   teamBenefit      Int
   role             String
+}
+
+model userBuy {
+  id         Int                  @id @default(autoincrement())
+  createdAt  DateTime             @default(now())
+  updatedAt  DateTime             @updatedAt
+  user       user?                @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  userId     Int?
+  type       userBuyTypeProduct[]
+  productId  Int
+  status     Boolean
+  nominal    Int
+  taskNumber String
+  taskCode   String
+}
+
+model userBuyTypeProduct {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userBuy   userBuy? @relation(fields: [userBuyId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  userBuyId Int?
+  status    Boolean
+  name      String
+}
+
+model product {
+  id        Int               @id @default(autoincrement())
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @updatedAt
+  category  categoryProduct[]
+  type      typeProduct[]
+  image     imageProduct[]
+  status    Boolean
+  name      String
+  time      DateTime
+  banner    String
+  logo      String
+}
+
+model categoryProduct {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  product   product? @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  productId Int?
+  status    Boolean
+  name      String
+}
+
+model typeProduct {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  product   product? @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  productId Int?
+  status    Boolean
+  name      String
+}
+
+model imageProduct {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  product   product? @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  productId Int?
+  status    Boolean
+  image     String
 }
