@@ -1,9 +1,8 @@
-import Link from "next/link";
-import { MdOutlineEmail } from "react-icons/md";
 import Image from "next/image";
-
+ 
 
 export default function partner1() {
+  
   return (
     <>
      <label
@@ -35,7 +34,7 @@ export default function partner1() {
               </div>
               </div>
               </div>
-
+<br></br>
           <div className="grid grid-cols-2 gap-2">
   {["lv1.png", "lv2.png", "lv3.png", "lv4.png" , "lv5.png" , "lv6.png"].map((imageName, index) => (
     <Image
@@ -48,6 +47,13 @@ export default function partner1() {
     />
   ))}
 </div>
+
+<br></br>
+<label>
+<span className="text-sm font-semibold border border-gray-500 px-2 py-1 rounded" style={{ marginRight: '8px' }}>Mancanegara</span>
+<span className="text-sm font-semibold border border-gray-500 px-2 py-1 rounded"style={{ marginRight: '8px' }}>Local</span>
+<span className="text-sm font-semibold border border-gray-500 px-2 py-1 rounded"style={{ marginRight: '8px' }}>Import</span>
+</label>
 
           <div className="modal-action">
             <label className="btn btn-warning" htmlFor="partner1">

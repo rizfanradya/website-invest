@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { MdNotificationImportant, MdOutlineEmail } from "react-icons/md";
+ 
 import Image from "next/image";
 
 
@@ -23,25 +22,39 @@ export default function partner2() {
       <input type="checkbox" id="partner3" className="modal-toggle" />
       <div className="modal" role="dialog">
         <div className="modal-box bg-white text-black">
-          <h3 className="text-lg font-bold mb-4">Pemberitahuan Sistem</h3>
-
-          <div className="card bg-blue-600 shadow-xl">
-            <div className="card-body p-4 text-white">
-              <div className="flex justify-between items-center">
-                <MdOutlineEmail size={35} className="text-red-500" />
-                <Link
-                  href={"/account"}
-                  className="link text-warning text-sm font-semibold"
-                >
-                  Show Detail
-                </Link>
+          <h3 className="text-lg font-bold mb-4">DIOR</h3>
+          <div className="card shadow-xl bg-blue-600">
+            <div className="card-body px-4 grid md:grid-cols-2 text-white"> 
+               <div className="flex flex-col">
+                <span className="font-light text-xs -mb-1 text-slate-300">
+                  Nomor Tugas
+                </span>
+                <span className="text-warning font-semibold">
+                  2403180348
+                </span>
               </div>
-              <span className="text-xs font-light">2024-03-07 17:40:21</span>
-              <span className="text-sm">
-                Pesanan O1765688933850587138 berhasil diambil.
-              </span>
-            </div>
-          </div>
+              </div>
+              </div>
+              <br></br>
+          <div className="grid grid-cols-2 gap-2">
+  {["dior1.png", "dior2.png", "dior3.png", "dior4.png" , "dior5.png" , "dior6.png"].map((imageName, index) => (
+    <Image
+      key={index}
+      src={`/partner/${imageName}`}
+      alt={imageName}
+      width={500}
+      height={500}
+      className="rounded-xl m-auto h-full"
+    />
+  ))}
+</div>
+
+<br></br>
+<label>
+<span className="text-sm font-semibold border border-gray-500 px-2 py-1 rounded" style={{ marginRight: '8px' }}>Mancanegara</span>
+<span className="text-sm font-semibold border border-gray-500 px-2 py-1 rounded"style={{ marginRight: '8px' }}>Local</span>
+<span className="text-sm font-semibold border border-gray-500 px-2 py-1 rounded"style={{ marginRight: '8px' }}>Import</span>
+</label>
 
           <div className="modal-action">
             <label className="btn btn-warning" htmlFor="partner3">

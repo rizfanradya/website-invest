@@ -2,7 +2,7 @@ import UserLayout from "@/app/components/userLayout";
 import Partner1 from "./partner1";
 import Partner2 from "./partner2";
 import Partner3 from "./partner3";
-
+ 
 import Topup from "@/app/components/topup";
 import Image from "next/image";
 
@@ -16,6 +16,7 @@ const dataPartnerBawah = [
 ];
 
 export default function GrabOrder() {
+ 
   return (
     <UserLayout>
       <title>Blibli71 - Grab Order</title>

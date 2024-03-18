@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { MdNotificationImportant, MdOutlineEmail } from "react-icons/md";
+ 
 import Image from "next/image";
 
 
@@ -24,7 +23,19 @@ export default function partner2() {
       <div className="modal" role="dialog">
         <div className="modal-box bg-white text-black">
           <h3 className="text-lg font-bold mb-4">Jordan</h3>
-
+          <div className="card shadow-xl bg-blue-600">
+            <div className="card-body px-4 grid md:grid-cols-2 text-white"> 
+               <div className="flex flex-col">
+                <span className="font-light text-xs -mb-1 text-slate-300">
+                  Nomor Tugas
+                </span>
+                <span className="text-warning font-semibold">
+                  2403180348
+                </span>
+              </div>
+              </div>
+              </div>
+              <br></br>
           <div className="grid grid-cols-2 gap-2">
   {["jordan1.png", "jordan2.png", "jordan3.png", "jordan4.png" , "jordan5.png" , "jordan6.png"].map((imageName, index) => (
     <Image
@@ -37,6 +48,13 @@ export default function partner2() {
     />
   ))}
 </div>
+
+<br></br>
+<label>
+<span className="text-sm font-semibold border border-gray-500 px-2 py-1 rounded" style={{ marginRight: '8px' }}>Mancanegara</span>
+<span className="text-sm font-semibold border border-gray-500 px-2 py-1 rounded"style={{ marginRight: '8px' }}>Local</span>
+<span className="text-sm font-semibold border border-gray-500 px-2 py-1 rounded"style={{ marginRight: '8px' }}>Import</span>
+</label>
 
           <div className="modal-action">
             <label className="btn btn-warning" htmlFor="partner2">
