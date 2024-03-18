@@ -39,12 +39,12 @@ export default function BillList() {
                 <span className="font-semibold">0</span>
               </div>
 
-              <div className="flex flex-col">
-                <span className="font-light text-xs -mb-1 text-slate-300">
-                  Jumlah Perubahan Akun
-                </span>
-                <span className="font-semibold text-error">Rp 30.000</span>
-              </div>
+                <div className="flex flex-col">
+                  <span className="font-light text-xs -mb-1 text-slate-300">
+                    Jumlah Perubahan Akun
+                  </span>
+                  <span className="font-semibold text-error">Rp 30.000</span>
+                </div>
 
               <div className="flex flex-col">
                 <span className="font-light text-xs -mb-1 text-slate-300">

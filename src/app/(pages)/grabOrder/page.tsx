@@ -1,16 +1,18 @@
 import UserLayout from "@/app/components/userLayout";
-import { PiHandTapFill } from "react-icons/pi";
-import GrabOrderUserIncomeNotifyCarousel from "./userIncomeNotifyCarousel";
+import Partner1 from "./partner1";
+import Partner2 from "./partner2";
+import Partner3 from "./partner3";
+
 import Topup from "@/app/components/topup";
 import Image from "next/image";
 
-const dataPartner = [
-  { image: "1.png" },
-  { image: "2.png" },
-  { image: "3.png" },
-  { image: "4.png" },
+const dataPartnerBawah = [
+  { image: "1.png"},
+  { image: "2.png"},
+  { image: "3.png"},
+  { image: "4.png"},
   { image: "5.png" },
-  { image: "6.jpg" },
+  { image: "6.jpg" }, 
 ];
 
 export default function GrabOrder() {
@@ -33,23 +35,15 @@ export default function GrabOrder() {
           height={100}
           className="w-full"
         />
+
       </div>
 
       <div className="my-8 flex gap-4 overflow-x-auto">
-        {dataPartner.map((doc, index) => (
-          <div key={index}>
-            <div className="w-48 h-32">
-              <Image
-                src={`/partner/${doc.image}`}
-                alt={doc.image}
-                width={100}
-                height={100}
-                className="rounded-lg w-full h-full"
-              />
-            </div>
-          </div>
-        ))}
+        <Partner1 />
+        <Partner2 />
+        <Partner3 />
       </div>
+
 
       <div className="my-8">
         <h1 className="font-semibold md:text-xl mb-4 text-black">
@@ -57,7 +51,7 @@ export default function GrabOrder() {
         </h1>
 
         <div className="grid grid-cols-2 gap-2">
-          {dataPartner.map((doc, index) => (
+          {dataPartnerBawah.map((doc, index) => (
             <div className="h-20 sm:h-60 md:h-78 lg:h-30" key={index}>
               <Image
                 src={`/partner/${doc.image}`}
