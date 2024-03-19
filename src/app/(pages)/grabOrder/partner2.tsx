@@ -1,6 +1,6 @@
  
 import Image from "next/image";
-
+import Countdown from "./countdown";
 
 export default function partner2() {
   return (
@@ -33,6 +33,8 @@ export default function partner2() {
                   2403180348
                 </span>
               </div>
+              <Countdown />
+
               </div>
               </div>
               <br></br>
