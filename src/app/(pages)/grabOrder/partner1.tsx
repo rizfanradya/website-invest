@@ -1,4 +1,6 @@
+
 import Image from "next/image";
+import Countdown from "./countdown";
  
 
 export default function partner1() {
@@ -32,8 +34,12 @@ export default function partner1() {
                   2403180348
                 </span>
               </div>
+              <Countdown />
               </div>
+
               </div>
+
+
 <br></br>
           <div className="grid grid-cols-2 gap-2">
   {["lv1.png", "lv2.png", "lv3.png", "lv4.png" , "lv5.png" , "lv6.png"].map((imageName, index) => (

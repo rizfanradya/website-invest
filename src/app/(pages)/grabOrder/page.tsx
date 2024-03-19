@@ -2,7 +2,8 @@ import UserLayout from "@/app/components/userLayout";
 import Partner1 from "./partner1";
 import Partner2 from "./partner2";
 import Partner3 from "./partner3";
- 
+import Partner4 from "./partner4";
+
 import Topup from "@/app/components/topup";
 import Image from "next/image";
 
@@ -43,6 +44,8 @@ export default function GrabOrder() {
         <Partner1 />
         <Partner2 />
         <Partner3 />
+        <Partner4 />
+
       </div>
 
 

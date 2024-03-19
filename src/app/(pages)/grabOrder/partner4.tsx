@@ -6,12 +6,12 @@ export default function partner2() {
   return (
     <>
      <label
-  htmlFor="partner2"
+  htmlFor="partner4"
   className="flex items-center justify-between cursor-pointer"
 >
       <Image 
-      src="/partner/2.png" 
-      alt="2.png" 
+      src="/partner/4.png" 
+      alt="4.png" 
       width={60} 
       height={60} 
       />
@@ -19,10 +19,10 @@ export default function partner2() {
 </label>
 
 
-      <input type="checkbox" id="partner2" className="modal-toggle" />
+      <input type="checkbox" id="partner4" className="modal-toggle" />
       <div className="modal" role="dialog">
         <div className="modal-box bg-white text-black">
-          <h3 className="text-lg font-bold mb-4">Jordan</h3>
+          <h3 className="text-lg font-bold mb-4">DIOR</h3>
           <div className="card shadow-xl bg-blue-600">
             <div className="card-body px-4 grid md:grid-cols-2 text-white"> 
                <div className="flex flex-col">
@@ -39,7 +39,7 @@ export default function partner2() {
               </div>
               <br></br>
           <div className="grid grid-cols-2 gap-2">
-  {["jordan1.png", "jordan2.png", "jordan3.png", "jordan4.png" , "jordan5.png" , "jordan6.png"].map((imageName, index) => (
+  {["cvr1.png", "cvr2.png", "cvr3.png", "cvr4.png" , "cvr5.png" , "cvr6.png"].map((imageName, index) => (
     <Image
       key={index}
       src={`/partner/${imageName}`}
@@ -59,7 +59,7 @@ export default function partner2() {
 </label>
 
           <div className="modal-action">
-            <label className="btn btn-warning" htmlFor="partner2">
+            <label className="btn btn-warning" htmlFor="partner4">
               Close
             </label>
           </div>
@@ -67,7 +67,7 @@ export default function partner2() {
 
         <label
           className="modal-backdrop cursor-pointer"
-          htmlFor="partner2"
+          htmlFor="partner4"
         ></label>
       </div>
     </>
