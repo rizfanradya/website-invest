@@ -12,10 +12,9 @@ import { CountdownCircleTimer } from
             <CountdownCircleTimer 
               isPlaying 
               duration={duration}
-              colors={[ 
-                ['#004777', 0.33], // warna untuk jam
-              ]} 
-              size={50} // ukuran lingkaran
+              colors={['#004777', '#F7B801', '#A30000', '#A30000']}
+              colorsTime={[7, 5, 2, 0]}
+              size={50}  
             > 
               {({ remainingTime }) => {
                 const hours = Math.floor(remainingTime / 3600);
@@ -32,10 +31,9 @@ import { CountdownCircleTimer } from
             <CountdownCircleTimer 
               isPlaying 
               duration={duration}
-              colors={[ 
-                ['#F7B801', 0.33], // warna untuk menit
-              ]} 
-              size={50} // ukuran lingkaran
+              colors={['#004777', '#F7B801', '#A30000', '#A30000']}
+              colorsTime={[7, 5, 2, 0]}
+              size={50}  
             > 
               {({ remainingTime }) => {
                 const minutes = Math.floor(remainingTime / 60);
@@ -51,9 +49,8 @@ import { CountdownCircleTimer } from
             <CountdownCircleTimer 
               isPlaying 
               duration={duration}
-              colors={[ 
-                ['#A30000', 0.33], // warna untuk detik
-              ]} 
+              colors={['#004777', '#F7B801', '#A30000', '#A30000']}
+              colorsTime={[7, 5, 2, 0]}
               size={50} // ukuran lingkaran
             > 
               {({ remainingTime }) => {
